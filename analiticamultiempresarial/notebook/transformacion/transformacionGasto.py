@@ -28,7 +28,7 @@ def total_gastado_por_descripcion(data_frame_gasto):
     resultado=data_frame_gasto.groupby("descripcion")["monto"].sum()
     
     #TAREA 1.3 ordenar de mayor a menor y retornar el resultado
-    resultado=resultado.sort_values(ascending=False)
+    resultado=resultado.sort_values(ascending=False).reset_index(name="monto")
     return resultado
 
 
